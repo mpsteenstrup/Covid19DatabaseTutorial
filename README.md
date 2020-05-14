@@ -173,3 +173,6 @@ visualiseringen **kan** indeholde
 I skal redegøre for datastrukturen og hvordan I behandler data.
 
 Visualiseringen og redegørelsen skal præsenteres i jeres portfoie.
+
+# Elevernes visualiseringer kan ses her
+[Visualiseringer](https://mpsteenstrup.github.io/Covid19DatabaseTutorial/elevproduktioner/elevproduktioner.html)
