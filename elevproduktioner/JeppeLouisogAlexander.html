@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Covid Map</title>
+	<meta charset="utf-8">
+    <!-- Hvis det ikke virker lokalt så se det på vores Github Pages https://madebyjeppe.github.io/COVID19-map/-->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		img {
+			opacity: 0;
+		}
+		
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//d43xv
+
+let table;
+
+let mapImg;
+
+let slider; 
+
+let lats, longs;
+
+let mapScale = 0.7;
+
+function preload() {
+	table = loadTable('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv', 'csv','header');
+}
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+
+	mapImg = createImg('https://upload.wikimedia.org/wikipedia/commons/e/ea/Equirectangular-projection.jpg');
+	
+	lats = table.getColumn("Lat");
+	longs = table.getColumn("Long");
+
+	dates = table.columns.slice(4);
+	
+	slider = createSlider(0,dates.length-1, 0);
+	slider.position(width/2,0);
+	slider.input(sliderChanged);
+	
+	fill(0);
+	textSize(12);
+	text(dates[slider.value()],width/2,45);
+	fill(255);
+	
+	drawMap();
+	drawPoints(table.getColumn(dates[slider.value()]));
+}
+
+function drawPoints(cases) {
+	largestCase = Math.max(...cases);
+	
+	for(var i = 0; i < cases.length; i++) {
+		var pointSize = Math.pow(cases[i], 0.25);
+		var largestPointSize = Math.pow(largestCase, 0.25);
+		
+		fill(255, 255 * (1-pointSize/largestPointSize), 255 * (1-pointSize/largestPointSize));
+		ellipse(width/2 + parseFloat(longs[i])*5.71*mapScale, height/2 - parseFloat(lats[i])*5.71*mapScale, pointSize);
+	}
+}
+
+function sliderChanged() {
+	clear();
+	drawMap();
+	drawPoints(table.getColumn(dates[slider.value()]));
+	
+	fill(0);
+	textSize(12);
+	text(dates[slider.value()],width/2,45);
+	fill(255);
+}
+
+function drawMap() {
+	image(mapImg, width/2 - mapImg.width*mapScale/2, height/2 - mapImg.height*mapScale/2, mapImg.width * mapScale, mapImg.height * mapScale);
+}
+
+
+
+
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

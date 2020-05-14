@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>00xmw</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//00xmw
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+	
+}
+ 
+function draw() {
+	
+}
+ 
+let table;
+let img;
+let count=5;
+timedelay = 0;
+ 
+ 
+ 
+function preload() {
+  table = loadTable('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv', 'csv','header');
+  img = createImg('https://docs.qgis.org/3.4/en/_images/plate_carree_projection.png');
+  img.hide();
+ 
+}
+ 
+function setup() {
+  createCanvas(windowWidth,windowHeight);
+  background(255,255,255);
+  textSize(60);
+  fill(200,0,0);
+  frameRate(10);
+  noStroke(0);
+ 
+}
+ 
+function draw(){
+  frameRate(20/log(count));
+  image(img,400-368.5,400-218*0.84,368*2,368);
+  text('Antal smittede på verdensplan:',30,70)
+c = color(255,255,255);
+fill(c);
+rect(30, 100, 200, 52);
+fill(200,0,0);
+  text(table.columns[count],30,150);
+  lat = table.getColumn('Lat');
+  long = table.getColumn('Long');
+  confirmed = table.getColumn(count);
+ 
+  for (i=0;i<table.getRowCount();i++){
+      ellipse(400+long[i]*2,400-lat[i]*2,log(confirmed[i]),log(confirmed[i]));
+  fill(127.5+(long[i]*255)/360,0,0)}
+ 
+  for (i=0;i<table.getRowCount();i++){
+  	 fill(0,0,200);
+      ellipse(900+count,575-confirmed[94]/5.8,10,10);
+ }
+ 
+  for (i=0;i<table.getRowCount();i++){
+  	fill(200,0,0);
+      ellipse(900+count,575-confirmed[137]/60.2,10,10);
+}
+ 
+ 
+ 
+  count += 1;
+  if (count>table.getColumnCount()-1){
+    count = table.getColumnCount()-1;
+  }
+  
+  
+}
+function mousePressed(){
+  count=5;
+fill(c);
+rect(780, 0, 250, 600);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

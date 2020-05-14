@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6ujzs</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//6ujzs
+
+
+let table;
+let count=4;{
+
+function preload() {
+  table = loadTable('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv', 'csv','header');
+}
+
+function setup() {
+  createCanvas(windowWidth,windowHeight);
+  US = table.findRow('US','Country/Region');
+  Italy = table.findRow ('Italy','Country/Region');
+  head = table.columns;
+}
+
+function draw(){
+  frameRate(100/count);
+  background('#fae');
+  text(US.arr[count],300,250);
+  text(Italy.arr[count],800,250);
+  text(head[count],500,100);
+  text("USA",300,200);
+  text("Italy",800,200);
+  textFont('Georgia');
+  textSize(20);
+  text("Number of infected",100,250);
+  text("Number of infected",600,250);
+  text("%",100,300);
+  text("%",600,300);
+
+
+var total = 328200000;
+ percent = US.arr[count]*100/total;
+text((percent),300,300);
+circle(300, 500,percent*1000);
+
+var total = 60360000;
+ percent = Italy.arr[count]*100/total;
+text((percent),800,300);
+circle(900, 500,percent*1000);
+textSize(40);
+
+  count +=1;
+
+  if (count>table.getColumnCount()-1){
+    count = 4;
+  }
+}
+
+}
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

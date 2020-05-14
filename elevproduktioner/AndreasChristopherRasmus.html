@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="en"><head>
+    <!-- Andreas, Christopher & Rasmus -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+
+  </head>
+  <body>
+    <script>
+        let table;
+        let death;
+        let img;
+        let deadbois;
+        let scale = 0.75;
+        timedelay = 0;
+        let slider;
+        let currentCount = 5;
+
+        function preload() {
+        table = loadTable('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv', 'csv','header');
+        img = createImg('https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Blue_Marble_2002.png/1920px-Blue_Marble_2002.png', 'Earth');
+        img.hide();
+        death = loadTable('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv', 'csv', 'header');
+        deadbois = createImg('https://i.imgur.com/bySUhGG.png', 'Death');
+        deadbois.hide();
+        	img = createImg('https://upload.wikimedia.org/wikipedia/commons/e/ea/Equirectangular-projection.jpg');
+          img.hide();
+        }
+
+        function setup() {
+        createCanvas(img.width*scale,img.height*scale);
+        textSize(30);
+        noStroke();
+        slider = createSlider(5, table.getColumnCount()-1, 0, 1);
+        slider.position(5, 40);
+        }
+
+        function draw(){
+        count = slider.value();
+        background(0,100,200);
+        image(img, 0, 0, img.width * scale, img.height * scale);
+        image(deadbois, 5, height-50, deadbois.width * scale, deadbois.height * scale);
+
+        fill(255);
+        text(table.columns[count], 5, 30);
+        lat = table.getColumn('Lat');
+        long = table.getColumn('Long');
+        confirmed = table.getColumn(count);
+        dead = death.getColumn(count);
+
+        if(currentCount != count) {
+            currentCount = count;
+        }
+            for(let i = 5; i < table.getRowCount(); i++) {
+            fill(200);
+            ellipse(width/2 + long[i]*5.3 * scale, height/2 - lat[i]*5.3 * scale, log(confirmed[i]), log(confirmed[i]));
+            fill(255, 0, 0, (dead[i] / confirmed[i]) * 255*3.5);
+            ellipse(width/2 + long[i]*5.3 * scale, height/2 - lat[i]*5.3 * scale, log(confirmed[i]), log(confirmed[i]));
+            }
+        }
+    </script>
+</body></html>

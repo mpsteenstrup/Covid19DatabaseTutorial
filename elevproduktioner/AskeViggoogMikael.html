@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>8ob03</title>
+	<meta charset="utf-8">
+	<!-- Compiled w/ P5LIVE, http://github.com/ffd8/p5live -->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/addons/p5.sound.min.js"></script>
+	<style type="text/css">
+		body{
+			margin:0;
+			overflow:hidden;
+		}
+		canvas{
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:-1;
+			width:100vw;
+			height:100vh;
+			margin:0;
+		}
+	</style>
+	<script type="text/javascript">
+		// eco-mode = only render if window focused
+		window.onblur = function () {
+			noLoop()
+		}
+		window.onfocus = function () {
+			loop();
+		}
+	</script>
+<script type="text/javascript">
+//8ob03
+
+function setup() {
+	createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+
+}
+let table;
+let count=5;
+
+function preload() {
+  table = loadTable('https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv', 'csv','header');
+}
+
+function setup() {
+  createCanvas(windowWidth,windowHeight);
+  China = table.findRow('Hubei','Province/State');
+  Spain = table.findRow('Spain','Country/Region');
+  Italy = table.findRow('Italy','Country/Region');
+  US = table.findRow('US','Country/Region');
+  Denmark = table.findRow('56.2639','Lat');
+  Sweden = table.findRow('Sweden','Country/Region');
+  France = table.findRow('46.2276','Lat');
+  Brazil = table.findRow('Brazil','Country/Region');
+  Iran = table.findRow('Iran','Country/Region');
+  head = table.columns;
+  textSize(60);
+  fill(200);
+  frameRate(10);
+
+}
+function draw(){
+  background(100,100,100);
+  spDøde = Spain.arr[count];//-Spain.arr[count-1];
+  itDøde = Italy.arr[count];
+  kinaDøde = China.arr[count];
+  usaDøde = US.arr[count];
+  dkDøde = Denmark.arr[count];
+  svDøde = Sweden.arr[count];
+  frDøde = France.arr[count];
+  brDøde = Brazil.arr[count];
+  irDøde = Iran.arr[count];
+    fill(50,20,100)
+    square(500,200,20*log(spDøde),20*log(spDøde));
+      fill(200,90,90)
+  circle(500,350,20*log(itDøde),20*log(itDøde));
+     fill(90,20,123)
+  square(500,500,20*log(kinaDøde),20*log(kinaDøde));
+     fill(20,20,100)
+  circle(150,200,20*log(usaDøde),20*log(usaDøde));
+    fill(200,20,100)
+   square(150,350,20*log(dkDøde),20*log(dkDøde));
+     fill(123,74,200)
+  circle(150,500,20*log(svDøde),20*log(svDøde));
+    fill(70,199,1)
+  circle(850,200,20*log(frDøde),20*log(frDøde));
+    fill(40,100,180)
+   square(850,350,20*log(brDøde),20*log(brDøde));
+     fill(10,90,140)
+   circle(850,500,20*log(irDøde),20*log(irDøde));
+    fill(0)
+    textSize(20)
+    	text("Spanien",500,200)
+    textSize(20)
+    	text("Italien",500,350)
+    textSize(20)
+    	text("Kina",500,500)
+    textSize(20)
+    	text("USA",150,200)
+    textSize(20)
+    	text("Danmark",150,350)
+    textSize(20)
+    	text("Sverige",150,500)
+    textSize(20)
+    	text("Frankrig",850,200)
+    textSize(20)
+    	text("Brasilien",850,350)
+    textSize(20)
+    	text("Iran",850,500)
+    	textSize(90)
+    textSize(35)
+    	text("Oversigt over udviklingen af antal smittede i udvalgte lande",115,60)
+  text(head[count],500,100);
+  
+
+  count +=1;
+  if (count>table.getColumnCount()-1){
+    count = 5;
+  }
+}
+
+
+/* CUSTOM FUNCTIONS FOR P5LIVE */
+// keep fullscreen if window resized
+function windowResized() {
+	resizeCanvas(windowWidth, windowHeight);
+}
+
+// custom ease function
+function ease(iVal, oVal, eVal){
+	return oVal += (iVal - oVal) * eVal;
+}
+
+// processing compatibility
+function println(msg){
+	print(msg);
+}
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
