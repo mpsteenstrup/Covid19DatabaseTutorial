@@ -113,13 +113,14 @@ Vi starter med js filen [ExploreData.js](javaScript/ExploreData.js).
 
 ### Example
 [videoløsning](https://youtu.be/sfg6oYdRS5I)
-* Find javaScript consollen i browseren.
-* Undersøg data.
-* Print antallet af rækker og kolonner.
-* Find data på Italien.
+* Finder javaScript consollen i browseren.
+* Undersøger data.
+* Printer antallet af rækker og kolonner.
+* Finder data på Italien.
 
 
 ### Øvelse
+Prøv selv.
 * Find javaScript consollen i browseren.
 * Undersøg data for antallet af smittede (linket er øverst).
 * Print antallet af rækker og kolonner.
