@@ -2,6 +2,10 @@
 
 Vi skal arbejde med det underliggende data der ligger under visualiseringen af covid-19, [(CSSE), Johns Hopkins University Hospital](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 
+Det kan gøres statisk som Hopkins eller dynamisk som her,
+![The race](https://www.youtube.com/watch?v=lWzabvOStDo)
+
+
 ### øvelse
 I skal undersøge informationen på websitet.
 * Lav en liste med de informationer I kan finde,(lande, antal smittede, ).
