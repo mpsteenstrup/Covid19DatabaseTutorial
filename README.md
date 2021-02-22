@@ -116,11 +116,11 @@ Det er også muligt at bruge Arom og Teletype, hvis I har det bedre med det.
 
 
 ## HelloWorld med P5js
-
-
-
-
-
+Som altid er det godt at kunne køre et ```HelloWorld```script.
+### Øvelse
+* Download JSfiler folderen og åben den som projekt i Atom.
+* Ret ```<script src="JSfiler/generalFilterSharpening.js"></script> ``` så det er ```HelloWorld.js``` filen som bruges.
+* Brug Atom liveserver til at se resultatet, det virker vist ikke med Prewiew HTML.
 
 ## Indlæsning af data
 
