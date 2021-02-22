@@ -83,11 +83,11 @@ Løsning, **nøgle**, rækkenummer i tabellen, **Entiteter**, lande eller region
 Vi får brug for data rent i csv format, Det kan gøres ved `Raw` knappen.
 
 
-
-# Atom
+# Værktøj til programmering
+## Atom
 Vi bruger Atom til at kode vores JS filer og kører den i browseren. Hvordan man laver ```index.html``` filen og opsætningen af teletype er beskrevet på siden, [https://github.com/mpsteenstrup/Billedmanipulation](https://github.com/mpsteenstrup/Billedmanipulation).
 
-# P5js
+## P5js
 Vi bruger biblioteket P5js,
 
 * [https://p5js.org/](https://p5js.org/)
@@ -113,6 +113,13 @@ Det er også muligt at bruge Arom og Teletype, hvis I har det bedre med det.
 ### opsætning p5live
 * I settings skal I fjerne 'Live Coding', så programmet ikke automatisk kører jeres kode. Hvis I er i gang med at lave en løkke kan det få programmet til at gå ned.
 * Programmet kører i browseren og den letteste måde at gemme er at markere alt teksten og kopiere den over i en tekst editor på computeren.
+
+
+## HelloWorld med P5js
+
+
+
+
 
 
 ## Indlæsning af data
