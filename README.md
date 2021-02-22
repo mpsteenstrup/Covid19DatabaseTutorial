@@ -88,8 +88,13 @@ Vi får brug for data rent i csv format, Det kan gøres ved `Raw` knappen.
 Vi bruger Atom til at kode vores JS filer og kører den i browseren. Hvordan man laver ```index.html``` filen og opsætningen af teletype er beskrevet på siden, [https://github.com/mpsteenstrup/Billedmanipulation](https://github.com/mpsteenstrup/Billedmanipulation).
 
 # P5js
-Vi bruger
+Vi bruger biblioteket P5js,
 
+* [https://p5js.org/](https://p5js.org/)
+* [Introduktion med en del små programmer](https://github.com/mpsteenstrup/GCP4)
+* [Kreativ Kodning, Kristian Wicnmann](https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos), kode på [kwichmann
+/
+Kreativ-Kodning](https://github.com/kwichmann/Kreativ-Kodning).
 
 ## Undersøgelse og visualisering af data
 Vi vil bruge javaScript biblioteket P5.js til at visualisere data.
