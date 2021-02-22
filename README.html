@@ -1,0 +1,449 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:////Users/mpsteenstrup/.atom/packages/markdown-preview-enhanced/node_modules/@shd101wyy/mume/dependencies/katex/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="covid19databasetutorial">Covid19DatabaseTutorial</h1>
+
+<p>Vi skal arbejde med det underliggende data der ligger under visualiseringen af covid-19, <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6">(CSSE), Johns Hopkins University Hospital</a></p>
+<h3 class="mume-header" id="%C3%B8velse">&#xF8;velse</h3>
+
+<p>I skal unders&#xF8;ge informationen p&#xE5; websitet.</p>
+<ul>
+<li>Lav en liste med de informationer I kan finde,(lande, antal smittede, ).</li>
+<li>Beskriv hvordan informaitonerne bliver repr&#xE6;senteret.</li>
+<li>Beskriv interaktionen, hvordan v&#xE6;lger brugeren og hvilke informationer kommer der.</li>
+</ul>
+<h2 class="mume-header" id="tre-lags-arkitektur-kilde-iftekhttpiftekdkleksikontre-lags-arkitektur">Tre-lags-arkitektur, (kilde <a href="http://iftek.dk/leksikon:tre-lags-arkitektur">iftek</a>)</h2>
+
+<p>I en trelagsarkitur indeles et program i tre lag, hvilket er er nyttigt i implementeringen af programmer, da de tre lag s&#xE5; vidt mulig holdes adskilte og dermed er hele programmet lettere at overskue.</p>
+<p><strong>Pr&#xE6;sentationslag:</strong> Det &#xF8;verste lag der h&#xE5;ndterer modtagelse og pr&#xE6;sentation af data. Dette lag er kendetegnet ved at v&#xE6;re &#x201D;t&#xE6;t&#x201D; p&#xE5; brugeren af programmet.</p>
+<p><strong>Logiklag:</strong> Det midterste lag der h&#xE5;ndterer udvekslingen af data mellem pr&#xE6;sentationslaget og datalaget.</p>
+<p><strong>Datalag:</strong> Det nederste lag der opbevarer og h&#xE5;ndterer data. Dette lag er ogs&#xE5; kendetegnet ved at v&#xE6;re &#x201D;t&#xE6;t&#x201D; p&#xE5; computeren.</p>
+<p><strong>Datalaget</strong> er her en database som er lagt offentligt tilg&#xE6;ngelig p&#xE5; Github</p>
+<p><a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv">github.com antal d&#xF8;dsfald</a></p>
+<p><a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv">githob.com antal smittede</a></p>
+<p><strong>Logiklaget</strong> behandler data.</p>
+<p><img src="images/database1.png" alt="dataeksempel"></p>
+<p>eks.<br>
+pseudokode til valg af F&#xE6;r&#xF8;erne:</p>
+<pre data-role="codeBlock" data-info class="language-"><code>Hvis mus klik med koordinaterne (-6.92,61) vis data fra r&#xE6;kke 94
+fra datas&#xE6;t `github.com antal d&#xF8;dsfald` og `github.com antal smittede`
+</code></pre><p>I <strong>Pr&#xE6;sentationslaget</strong> bliver resultatet af logiklaget vist.<br>
+eks.</p>
+<p><img src="images/database2.png" alt="faeroeerne"><br>
+<img src="images/database3.png" alt="graf"></p>
+<h3 class="mume-header" id="%C3%B8velse-1">&#xD8;velse</h3>
+
+<ul>
+<li>Find Spanien i datas&#xE6;ttet, man kan s&#xF8;ge og unders&#xF8;g hvad der er i datalaget.</li>
+<li>Skriv speudokode til at v&#xE6;lge spanien fra venstre kolonne p&#xE5; websiden.</li>
+<li>Hvilke informationer vises i <em>pr&#xE6;sentationslaget</em>?</li>
+</ul>
+<h2 class="mume-header" id="github-datastruktur">Github datastruktur</h2>
+
+<p>Github ordner sin data i en biblioteksstruktur med &apos;repositor&apos; som overmappe og subrepositories som undermapper.</p>
+<p>Master repositori for covid-19 datamaterialer er <a href="https://github.com/CSSEGISandData/COVID-19">github covid-19</a>.</p>
+<p>Master repositori har en <code>README.md</code> fil hvor repositoriet bliver forklaret.</p>
+<h3 class="mume-header" id="%C3%B8velse-2">&#xD8;velse</h3>
+
+<ul>
+<li>Unders&#xF8;g mappestrukturen for  <a href="https://github.com/CSSEGISandData/COVID-19">github covid-19</a>.</li>
+<li>L&#xE6;s <code>README.md</code> filen.</li>
+<li>Hvorn&#xE5;r er subrepositories sidst opdateret.</li>
+<li>Hvorn&#xE5;r er datas&#xE6;ttet time_series_covid19_deaths_global.csv sidst opdateret og hvordan er det opdateret?</li>
+</ul>
+<h2 class="mume-header" id="github-csv-datasets">Github csv datasets</h2>
+
+<p>CSV, comma separated values, data er en simpel struktur hvor v&#xE6;rdier bliver adskilt af komma. Det bruges i regneark og til simpel overf&#xF8;rsel af data. Github viser filerne som et regneark, men mulighed for at s&#xF8;ge i det.</p>
+<p>De forskellige datas&#xE6;t eks <code>antal smittede</code> og <code>antal d&#xF8;de</code> kan ses som en database. For at kunne tr&#xE6;kke v&#xE6;rdier fra forskellige datas&#xE6;t skal hver r&#xE6;kke i datas&#xE6;ttet have et unikt navn, kaldet en <strong>n&#xF8;gle</strong>.</p>
+<h3 class="mume-header" id="databases-elemente">Databases elemente</h3>
+
+<ul>
+<li><strong>n&#xF8;gle</strong>, unik identifikation.</li>
+<li><strong>Entiteter</strong>, data som er konstant, persons navn, firma, bil.</li>
+<li><strong>Attributter</strong>, data som knytter sig til Entiteterne.</li>
+<li><strong>Relationer</strong>, relationer mellem entiteter.</li>
+</ul>
+<h3 class="mume-header" id="%C3%B8velse-3">&#xD8;velse</h3>
+
+<ul>
+<li>Angiv n&#xF8;gle, Entiteter og Attributter for datas&#xE6;ttet <a href="https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv#L8">covid-19 death</a></li>
+<li>Overvej problemer i forhold til at medtage flere regioner eller lande.</li>
+<li>Beskriv hvilken information tabellens f&#xF8;rste r&#xE6;kke, header, angiver.</li>
+</ul>
+<p>L&#xF8;sning, <strong>n&#xF8;gle</strong>, r&#xE6;kkenummer i tabellen, <strong>Entiteter</strong>, lande eller regioner, <strong>Attributter</strong>, koordinater og antal smittede</p>
+<p>Vi f&#xE5;r brug for data rent i csv format, Det kan g&#xF8;res ved <code>Raw</code> knappen.</p>
+<h2 class="mume-header" id="unders%C3%B8gelse-og-visualisering-af-data">Unders&#xF8;gelse og visualisering af data</h2>
+
+<p>Vi vil bruge javaScript biblioteket P5.js til at visualisere data.</p>
+<p><a href="https://p5js.org/reference/#/p5.Table">P5js Table reference</a></p>
+<p>Onlinev&#xE6;rkt&#xF8;jet <a href="https://teddavis.org/p5live/">https://teddavis.org/p5live/</a> g&#xF8;r det muligt at skrive kode sammen p&#xE5; forskellige computere.</p>
+<p><a href="https://youtu.be/_zipXWWdM-o">kort introduktionsvideo</a></p>
+<p>Det er ogs&#xE5; muligt at bruge Arom og Teletype, hvis I har det bedre med det.</p>
+<h3 class="mume-header" id="shortcuts-til-p5live-virker-i-chrome">SHORTCUTS til p5live (virker i Chrome)</h3>
+
+<ul>
+<li>CTRL + enter &#xBB; run code</li>
+<li>CTRL + E &#xBB; editor toggle</li>
+<li>CTRL + M &#xBB; menu toggle</li>
+<li>CTRL + - &#xBB; decrease fontsize</li>
+<li>CTRL + + &#xBB; increase fontsize</li>
+<li>CMD  + A &#xBB; mark all code</li>
+<li>CMD  + C &#xBB; copy code</li>
+</ul>
+<h3 class="mume-header" id="ops%C3%A6tning-p5live">ops&#xE6;tning p5live</h3>
+
+<ul>
+<li>I settings skal I fjerne &apos;Live Coding&apos;, s&#xE5; programmet ikke automatisk k&#xF8;rer jeres kode. Hvis I er i gang med at lave en l&#xF8;kke kan det f&#xE5; programmet til at g&#xE5; ned.</li>
+<li>Programmet k&#xF8;rer i browseren og den letteste m&#xE5;de at gemme er at markere alt teksten og kopiere den over i en tekst editor p&#xE5; computeren.</li>
+</ul>
+<h2 class="mume-header" id="indl%C3%A6sning-af-data">Indl&#xE6;sning af data</h2>
+
+<p>Vi starter med js filen <a href="javaScript/ExploreData.js">ExploreData.js</a>.</p>
+<h3 class="mume-header" id="example">Example</h3>
+
+<p><a href="https://youtu.be/sfg6oYdRS5I">videol&#xF8;sning</a></p>
+<ul>
+<li>Finder javaScript consollen i browseren.</li>
+<li>Unders&#xF8;ger data.</li>
+<li>Printer antallet af r&#xE6;kker og kolonner.</li>
+<li>Finder data p&#xE5; Italien.</li>
+</ul>
+<h3 class="mume-header" id="%C3%B8velse-4">&#xD8;velse</h3>
+
+<p>Pr&#xF8;v selv.</p>
+<ul>
+<li>Find javaScript consollen i browseren.</li>
+<li>Unders&#xF8;g data for antallet af smittede (linket er &#xF8;verst).</li>
+<li>Print antallet af r&#xE6;kker og kolonner.</li>
+<li>Ser det ud til at v&#xE6;re samme struktur som det andet datas&#xE6;t.</li>
+<li>Find data p&#xE5; Spanien.</li>
+</ul>
+<h2 class="mume-header" id="iteration-over-data">Iteration over data</h2>
+
+<p>Eksempel p&#xE5; iteration over data for Italien. <a href="javaScript/iterateData.js">iterateData.js</a></p>
+<h3 class="mume-header" id="%C3%B8velse-5">&#xD8;velse</h3>
+
+<ul>
+<li>Kopier koden over i p5live og k&#xF8;r den.</li>
+<li>Besktiv hvad I ser.</li>
+<li>Beskriv hvad <code>frameRate(100/count);</code> g&#xF8;r.</li>
+<li>Hvorfor starter variablen <code>count</code> ved 4?</li>
+<li>Tilf&#xF8;j Spanien ved siden af.</li>
+</ul>
+<h2 class="mume-header" id="datavisualisering">datavisualisering</h2>
+
+<p>Eksempel op visualisering af antallet af smittede i Italien.<br>
+<a href="javaScript/dataVisualisering.js">dataVisualisering.js</a></p>
+<h3 class="mume-header" id="%C3%B8velse-6">&#xD8;velse</h3>
+
+<ul>
+<li>Kopier koden over i p5live og k&#xF8;r den.</li>
+<li>Besktiv hvad I ser.</li>
+<li>Hvad i koden er nyt i forhold til <code>iterateData.js</code> filen.</li>
+<li>Tilf&#xF8;j Spanien, igen.</li>
+</ul>
+<p>Det er ogs&#xE5; muligt at bruge placeringsdata, Long (longitude) og Lat (latitude).</p>
+<p><a href="javaScript/dataVisualiseringLocation.js">dataVisualiseringLocation.js</a></p>
+<h3 class="mume-header" id="%C3%B8velse-7">&#xD8;velse</h3>
+
+<ul>
+<li>Kopier koden over i p5live og k&#xF8;r den, i genstarter med musseklik.<br>
+Problemerne med at f&#xE5; den helt rigtige placering skyldes at projektionen af en rund sf&#xE6;re p&#xE5; et flat kort ikke er triviel.</li>
+<li>Pr&#xF8;v at flyt eller str&#xE6;k kortet for at forbedre det.
+<ul>
+<li>Kan man g&#xF8;re det s&#xE5; placeringen bliver helt korrekt?</li>
+</ul>
+</li>
+<li>Beskriv det nye i koden.</li>
+<li>Giv de steder som vokser mest en anden farve.</li>
+</ul>
+<h1 class="mume-header" id="selvst%C3%A6ndigt-projekt-3-moduler">Selvst&#xE6;ndigt projekt 3 moduler.</h1>
+
+<p>I disse coronatider er information om smitte og smittespredning vigtig.</p>
+<p>I skal lave en visualisering af covid-19 smittespredningen.</p>
+<p>visualiseringen <strong>kan</strong> indeholde</p>
+<ul>
+<li>Udvikling over tid.</li>
+<li>Geografisk udbredelse.</li>
+<li>De forskellige attributter, antal d&#xF8;de, antal smittede og antallet som er kommet sig.</li>
+<li>Brugerinteraktion, eks. udv&#xE6;lgning af lande eller attributter.</li>
+</ul>
+<p>I skal redeg&#xF8;re for datastrukturen og hvordan I behandler data.</p>
+<p>Visualiseringen og redeg&#xF8;relsen skal pr&#xE6;senteres i jeres portfoie.</p>
+<h1 class="mume-header" id="elevernes-visualiseringer-kan-ses-her">Elevernes visualiseringer kan ses her</h1>
+
+<p><a href="https://mpsteenstrup.github.io/Covid19DatabaseTutorial/elevproduktioner/elevproduktioner.html">Visualiseringer</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

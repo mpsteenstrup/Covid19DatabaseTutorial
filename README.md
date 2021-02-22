@@ -1,4 +1,4 @@
-# Covid19DatabaseTutorial
+# Covid19DatabaseVisualisering
 
 Vi skal arbejde med det underliggende data der ligger under visualiseringen af covid-19, [(CSSE), Johns Hopkins University Hospital](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 
@@ -81,6 +81,15 @@ De forskellige datasæt eks `antal smittede` og `antal døde` kan ses som en dat
 Løsning, **nøgle**, rækkenummer i tabellen, **Entiteter**, lande eller regioner, **Attributter**, koordinater og antal smittede
 
 Vi får brug for data rent i csv format, Det kan gøres ved `Raw` knappen.
+
+
+
+# Atom
+Vi bruger Atom til at kode vores JS filer og kører den i browseren. Hvordan man laver ```index.html``` filen og opsætningen af teletype er beskrevet på siden, [https://github.com/mpsteenstrup/Billedmanipulation](https://github.com/mpsteenstrup/Billedmanipulation).
+
+# P5js
+Vi bruger
+
 
 ## Undersøgelse og visualisering af data
 Vi vil bruge javaScript biblioteket P5.js til at visualisere data.

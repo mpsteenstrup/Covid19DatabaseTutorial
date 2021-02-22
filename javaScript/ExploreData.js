@@ -12,6 +12,7 @@ function preload() {
 
 function setup() {
   print(table);
+  tilSenere();
 }
 
 function tilSenere(){

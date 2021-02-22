@@ -13,7 +13,7 @@ df.drop(df.loc[df['Long']==0].index, inplace=True)
 
 
 
-sizes = df.iloc[0:,-1].transform(np.log)
+sizes = df.iloc[0:,-1]#.transform(np.log)
 print(sizes)
 text =df['Country/Region']+ ' ' + df.iloc[:,-1].astype(str)
 fig = px.scatter_geo(df, lon = df['Long'], lat = df['Lat'], hover_name=text, size=sizes)
