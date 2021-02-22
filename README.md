@@ -92,17 +92,11 @@ Vi bruger biblioteket P5js,
 
 * [https://p5js.org/](https://p5js.org/)
 * [Introduktion med en del små programmer](https://github.com/mpsteenstrup/GCP4)
-* [Kreativ Kodning, Kristian Wicnmann](https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos), kode på [kwichmann
-/
-Kreativ-Kodning](https://github.com/kwichmann/Kreativ-Kodning).
+* [Kreativ Kodning, Kristian Wicnmann](https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos), kode på [github.com/kwichmann/Kreativ-Kodning](https://github.com/kwichmann/Kreativ-Kodning).
+* [P5js Table reference](https://p5js.org/reference/#/p5.Table)
 
-## Undersøgelse og visualisering af data
-Vi vil bruge javaScript biblioteket P5.js til at visualisere data.
-
-[P5js Table reference](https://p5js.org/reference/#/p5.Table)
-
+## Teddavis online værktøj
 Onlineværktøjet [https://teddavis.org/p5live/](https://teddavis.org/p5live/) gør det muligt at skrive kode sammen på forskellige computere.
-
 [kort introduktionsvideo](https://youtu.be/_zipXWWdM-o)
 
 Det er også muligt at bruge Arom og Teletype, hvis I har det bedre med det.
