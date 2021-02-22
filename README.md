@@ -2,10 +2,8 @@
 
 Vi skal arbejde med det underliggende data der ligger under visualiseringen af covid-19, [(CSSE), Johns Hopkins University Hospital](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 
-Det kan gøres statisk som Hopkins eller dynamisk som her,
-[![The race](https://www.youtube.com/watch?v=lWzabvOStDo)](https://www.youtube.com/watch?v=lWzabvOStDo)
+Det kan gøres statisk som Hopkins eller dynamisk som her, [The race](https://www.youtube.com/watch?v=lWzabvOStDo)
 
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](http://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID_HERE)
 
 ### øvelse
 I skal undersøge informationen på websitet.
