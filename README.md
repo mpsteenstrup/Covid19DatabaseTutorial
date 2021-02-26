@@ -118,8 +118,9 @@ Vi bruger biblioteket P5js,
 Som altid er det godt at kunne køre et ```HelloWorld```script.
 ### Øvelse
 * Download JSfiler folderen og åben den som projekt i Atom.
-* Ret ```<script src="JSfiler/generalFilterSharpening.js"></script> ``` så det er ```HelloWorld.js``` filen som bruges.
-* Brug Atom liveserver til at se resultatet, det virker vist ikke med Prewiew HTML.
+* Åben ```HelloWorld.html```og ```HelloWorld.js```og start **HTML Prewiew**.
+* I skulle gerne se en rød cirkel.
+* Prøv at lav om i koden og se hvad der sker. Få eks. den røde cirkel til at følge musen med ```ellipse(mouseX,mouseY,200,200)```
 
 ## Indlæsning af data
 

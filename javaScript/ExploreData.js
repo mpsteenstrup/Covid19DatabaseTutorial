@@ -11,14 +11,13 @@ function preload() {
 }
 
 function setup() {
-  print(table);
-  tilSenere();
-}
-
-function tilSenere(){
-  print('antal rækker: ' + table.getRowCount());
-  print('antal søjler: ' + table.getColumnCount());  print(table.columns[5]);
+  createCanvas(600,600);
+  textSize(32);
+  text('datasæt',10,30);
+  text('rows: ' + table.getRowCount(), 10, 60);
+  text('columns ' + table.getColumnCount(), 10, 90);
   Italy = table.findRow('Italy','Country/Region');
-  print(Italy);
-  print(Italy.arr[22]);
+  text(Italy.arr[129],10,120);
+  textSize(10);
+  text(table.columns,10,150);
 }
