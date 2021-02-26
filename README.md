@@ -25,6 +25,10 @@ I skal overveje
 * Hvilke betydning det har for jeres designvalg.
 * Hvor godt I formåede at implementere valgene.
 
+I skal redegøre for datastrukturen og hvordan I behandler data.
+
+Visualiseringen skal fremlægges i grupper for mig.
+
 
 
 
@@ -118,46 +122,44 @@ Vi bruger biblioteket P5js,
 Som altid er det godt at kunne køre et ```HelloWorld```script.
 ### Øvelse
 * Download JSfiler folderen og åben den som projekt i Atom.
-* Åben ```HelloWorld.html```og ```HelloWorld.js```og start **HTML Prewiew**.
+* Åben ```HelloWorld.html```og ```HelloWorld.js```og start **HTML Preview**.
 * I skulle gerne se en rød cirkel.
 * Prøv at lav om i koden og se hvad der sker. Få eks. den røde cirkel til at følge musen med ```ellipse(mouseX,mouseY,200,200)```
+* Undersøg ```.html``` filen og find den linje hvor P5js bliver indlæst og hvor ```HewlloWorld.js```bliver indlæst.
+* Brug **P5js** referencer til at lave om så baggrunden hele tide overskriver cirklen, evt. lidt gennemsigtigt.
+
 
 ## Indlæsning af data
 
-Vi starter med js filen [ExploreData.js](javaScript/ExploreData.js).
-
-### Example
-[videoløsning](https://youtu.be/sfg6oYdRS5I)
-* Finder javaScript consollen i browseren.
-* Undersøger data.
-* Printer antallet af rækker og kolonner.
-* Finder data på Italien.
-
+Vi starter med js filen [ExploreData.js](javaScript/ExploreData.js), der ligger også en ```ExploreData.html```fil.
 
 ### Øvelse
-Prøv selv.
-* Find javaScript consollen i browseren.
-* Undersøg data for antallet af smittede (linket er øverst).
-* Print antallet af rækker og kolonner.
-* Ser det ud til at være samme struktur som det andet datasæt.
+* Se programmet i preview.
+* Find ud af hvordan programmet skriver det du ser.
+* Overvej hvad ```table.columns ```gør.
 * Find data på Spanien.
+
+### Øvelse
+* Bemærk at data loades først i ```function preload() ```så det er klart til at blive brugt.
+* Lige nu loader vi antal døde, lav det om så vi loader antal smittede.
+
 
 ## Iteration over data
 Eksempel på iteration over data for Italien. [iterateData.js](javaScript/iterateData.js)
 
 ### Øvelse
-* Kopier koden over i p5live og kør den.
+* Opret selv en ```.html``` fil til at køre ```itererData.js```, eller lav om i den I brugte lige før.
 * Besktiv hvad I ser.
 * Beskriv hvad `frameRate(100/count);` gør.
 * Hvorfor starter variablen `count` ved 4?
 * Tilføj Spanien ved siden af.
 
-## datavisualisering
+## Datavisualisering
 Eksempel op visualisering af antallet af smittede i Italien.
 [dataVisualisering.js](javaScript/dataVisualisering.js)
 
 ### Øvelse
-* Kopier koden over i p5live og kør den.
+* Kør programmet
 * Besktiv hvad I ser.
 * Hvad i koden er nyt i forhold til `iterateData.js` filen.
 * Tilføj Spanien, igen.
@@ -168,27 +170,18 @@ Det er også muligt at bruge placeringsdata, Long (longitude) og Lat (latitude).
 
 ### Øvelse
 * Kopier koden over i p5live og kør den, i genstarter med musseklik.
-Problemerne med at få den helt rigtige placering skyldes at projektionen af en rund sfære på et flat kort ikke er triviel.
+Problemerne med at få den helt rigtige placering skyldes at projektionen af en rund kugle på et flat kort ikke er triviel.
 * Prøv at flyt eller stræk kortet for at forbedre det.
   - Kan man gøre det så placeringen bliver helt korrekt?
 * Beskriv det nye i koden.
 * Giv de steder som vokser mest en anden farve.
 
-# Selvstændigt projekt 3 moduler.
+# Selvstændigt projekt moduler.
 
 I disse coronatider er information om smitte og smittespredning vigtig.
 
 I skal lave en visualisering af covid-19 smittespredningen.
 
-visualiseringen **kan** indeholde
-* Udvikling over tid.
-* Geografisk udbredelse.
-* De forskellige attributter, antal døde, antal smittede og antallet som er kommet sig.
-* Brugerinteraktion, eks. udvælgning af lande eller attributter.
-
-I skal redegøre for datastrukturen og hvordan I behandler data.
-
-Visualiseringen og redegørelsen skal præsenteres i jeres portfoie.
 
 # Elevernes visualiseringer kan ses her
 [Visualiseringer](https://mpsteenstrup.github.io/Covid19DatabaseTutorial/elevproduktioner/elevproduktioner.html)
