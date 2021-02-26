@@ -2,7 +2,21 @@
 
 Vi skal arbejde med det underliggende data der ligger under visualiseringen af covid-19, [(CSSE), Johns Hopkins University Hospital](https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6)
 
-Det kan gøres statisk som Hopkins eller dynamisk som her, [The race](https://www.youtube.com/watch?v=lWzabvOStDo)
+Det kan gøres statisk som Hopkins eller dynamisk som her, [The race](https://www.youtube.com/watch?v=lWzabvOStDo), eller på en masse andre måder som I skal prøve.
+
+## Opgavebeskrivelse
+Efter et år med coronanedlukning er den eneste adspredelse af følge med i udviklingen i antal smittede og døde. De danske og internationale avise hungre efter nye visualiseringer som kan fange og underholde deres læserskare. De har derfor hyret hele 3.if fra Rysensteen gymnsium til at udvikle covid19 visualiseringer.
+
+I skal derfor lave et program der
+
+* Bruger data fra John Hopkins databasen.
+* Er dymanisk eller interaktivt.
+* Programmet skal kunne tilgås online, eks. på Github.
+
+I skal overveje
+* Hvorvidt jeres program skal være informativt eller underholdende.
+* Hvilke betydning det har for jeres designvalg.
+* Hvor godt I formåede at implementere valgene.
 
 
 ### øvelse
