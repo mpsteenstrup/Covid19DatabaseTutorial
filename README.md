@@ -4,7 +4,14 @@ Vi skal arbejde med det underliggende data der ligger under visualiseringen af c
 
 Det kan gøres statisk som Hopkins eller dynamisk som her, [The race](https://www.youtube.com/watch?v=lWzabvOStDo), eller på en masse andre måder som I skal prøve.
 
-## Opgavebeskrivelse
+### øvelse
+I skal undersøge informationen på websitet.
+* Lav en liste med de informationer I kan finde,(lande, antal smittede, ).
+* Beskriv hvordan informaitonerne bliver repræsenteret.
+* Beskriv interaktionen, hvordan vælger brugeren og hvilke informationer kommer der.
+
+
+## Projektbeskrivelse
 Efter et år med coronanedlukning er den eneste adspredelse af følge med i udviklingen i antal smittede og døde. De danske og internationale avise hungre efter nye visualiseringer som kan fange og underholde deres læserskare. De har derfor hyret hele 3.if fra Rysensteen gymnsium til at udvikle covid19 visualiseringer.
 
 I skal derfor lave et program der
@@ -19,11 +26,6 @@ I skal overveje
 * Hvor godt I formåede at implementere valgene.
 
 
-### øvelse
-I skal undersøge informationen på websitet.
-* Lav en liste med de informationer I kan finde,(lande, antal smittede, ).
-* Beskriv hvordan informaitonerne bliver repræsenteret.
-* Beskriv interaktionen, hvordan vælger brugeren og hvilke informationer kommer der.
 
 
 ## Tre-lags-arkitektur, (kilde [iftek](http://iftek.dk/leksikon:tre-lags-arkitektur))
@@ -79,7 +81,7 @@ Master repositori har en `README.md` fil hvor repositoriet bliver forklaret.
 
 
 ## Github csv datasets
-CSV, comma separated values, data er en simpel struktur hvor værdier bliver adskilt af komma. Det bruges i regneark og til simpel overførsel af data. Github viser filerne som et regneark, men mulighed for at søge i det.
+CSV, comma separated values, data er en simpel struktur hvor værdier bliver adskilt af komma. Det bruges i regneark og til simpel overførsel af data. Github viser filerne som et regneark, med mulighed for at søge i det. Hvis I skal bruge de rene data skal i trykke på **RAW** knappen. Det er også den URL i skal bruge når I skal hente data senere.
 
 De forskellige datasæt eks `antal smittede` og `antal døde` kan ses som en database. For at kunne trække værdier fra forskellige datasæt skal hver række i datasættet have et unikt navn, kaldet en **nøgle**.
 
@@ -111,26 +113,6 @@ Vi bruger biblioteket P5js,
 * [Introduktion med en del små programmer](https://github.com/mpsteenstrup/GCP4)
 * [Kreativ Kodning, Kristian Wicnmann](https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos), kode på [github.com/kwichmann/Kreativ-Kodning](https://github.com/kwichmann/Kreativ-Kodning).
 * [P5js Table reference](https://p5js.org/reference/#/p5.Table)
-
-## Teddavis online værktøj
-Onlineværktøjet [https://teddavis.org/p5live/](https://teddavis.org/p5live/) gør det muligt at skrive kode sammen på forskellige computere.
-[kort introduktionsvideo](https://youtu.be/_zipXWWdM-o)
-
-Det er også muligt at bruge Arom og Teletype, hvis I har det bedre med det.
-
-### SHORTCUTS til p5live (virker i Chrome)
-* CTRL + enter » run code
-* CTRL + E » editor toggle
-* CTRL + M » menu toggle
-* CTRL + - » decrease fontsize
-* CTRL + + » increase fontsize
-* CMD  + A » mark all code
-* CMD  + C » copy code
-
-### opsætning p5live
-* I settings skal I fjerne 'Live Coding', så programmet ikke automatisk kører jeres kode. Hvis I er i gang med at lave en løkke kan det få programmet til at gå ned.
-* Programmet kører i browseren og den letteste måde at gemme er at markere alt teksten og kopiere den over i en tekst editor på computeren.
-
 
 ## HelloWorld med P5js
 Som altid er det godt at kunne køre et ```HelloWorld```script.
@@ -209,3 +191,24 @@ Visualiseringen og redegørelsen skal præsenteres i jeres portfoie.
 
 # Elevernes visualiseringer kan ses her
 [Visualiseringer](https://mpsteenstrup.github.io/Covid19DatabaseTutorial/elevproduktioner/elevproduktioner.html)
+
+
+
+## Teddavis online værktøj
+Onlineværktøjet [https://teddavis.org/p5live/](https://teddavis.org/p5live/) gør det muligt at skrive kode sammen på forskellige computere.
+[kort introduktionsvideo](https://youtu.be/_zipXWWdM-o)
+
+Det er også muligt at bruge Arom og Teletype, hvis I har det bedre med det.
+
+### SHORTCUTS til p5live (virker i Chrome)
+* CTRL + enter » run code
+* CTRL + E » editor toggle
+* CTRL + M » menu toggle
+* CTRL + - » decrease fontsize
+* CTRL + + » increase fontsize
+* CMD  + A » mark all code
+* CMD  + C » copy code
+
+### opsætning p5live
+* I settings skal I fjerne 'Live Coding', så programmet ikke automatisk kører jeres kode. Hvis I er i gang med at lave en løkke kan det få programmet til at gå ned.
+* Programmet kører i browseren og den letteste måde at gemme er at markere alt teksten og kopiere den over i en tekst editor på computeren.
