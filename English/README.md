@@ -118,7 +118,7 @@ As always, it's good to be able to run a ```HelloWorld``` script.
 
 ## Loading data
 
-We start with the js file [ExploreData.js](javaScript/ExploreData.js),there is also a ```ExploreData.html```file.
+We start with the js file [ExploreData.js](/javaScript/ExploreData.js),there is also a ```ExploreData.html```file.
 
 ### Exercise
 * See the program in preview.
@@ -131,7 +131,7 @@ We start with the js file [ExploreData.js](javaScript/ExploreData.js),there is a
 * Right now we are loading the number of dead, change it so we are loading the number of infected.
 
 ## Iterate dataset
-Example of iteration over data for Italy, [iterateData.js](javaScript/iterateData.js)
+Example of iteration over data for Italy, [iterateData.js](/javaScript/iterateData.js)
 
 ### Exercise
 * Create a ```.html``` file to run ```itererData.js```, or change the one you used just before.
