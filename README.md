@@ -7,7 +7,7 @@ Det kan gøres statisk som Hopkins eller dynamisk som her, [The race](https://ww
 ### øvelse
 I skal undersøge informationen på websitet.
 * Lav en liste med de informationer I kan finde,(lande, antal smittede, ).
-* Beskriv hvordan informaitonerne bliver repræsenteret.
+* Beskriv hvordan informationerne bliver repræsenteret.
 * Beskriv interaktionen, hvordan vælger brugeren og hvilke informationer kommer der.
 
 
