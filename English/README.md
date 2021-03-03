@@ -42,7 +42,7 @@ The datalayer is public accesable data on Github.
 [githob.com antal smittede](https://github.com/CSSEGISandData/COVID-19/blob/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv)
 
 **Logic**
-![dataeksempel](images/database1.png)
+![dataeksempel](/images/database1.png)
 
 ex.
 Pseudocode to get Faroe Islands
