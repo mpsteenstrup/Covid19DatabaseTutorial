@@ -52,8 +52,8 @@ If mouse clicked at coordinates (-6.92,61) show row 94 from dataset `github.com 
 
 The presentation layer,
 
-![faeroeerne](images/database2.png)
-![graf](images/database3.png)
+![faeroeerne](/images/database2.png)
+![graf](/images/database3.png)
 
 ### Exercise
 * Find Spanien in the dataset.
@@ -141,7 +141,7 @@ Example of iteration over data for Italy, [iterateData.js](javaScript/iterateDat
 * Add Spain next to it.
 
 ## Data visualization
-Example visualization of the number of infected in Italy, [dataVisualisering.js](javaScript/dataVisualisering.js).
+Example visualization of the number of infected in Italy, [dataVisualisering.js](/javaScript/dataVisualisering.js).
 
 ### Exercise
 * Run the program
@@ -149,7 +149,7 @@ Example visualization of the number of infected in Italy, [dataVisualisering.js]
 * What is new in the code in relation to the `iterateData.js` file.
 * Add Spain, again.
 
-It is also possible to use location data, Long (longitude) and Lat (latitude), [dataVisualiseringLocation.js](javaScript/dataVisualiseringLocation.js)
+It is also possible to use location data, Long (longitude) and Lat (latitude), [dataVisualiseringLocation.js](/javaScript/dataVisualiseringLocation.js)
 
 ### Exercise
 * Copy the code into p5live and run it, restart with mouse click.
