@@ -1,3 +1,12 @@
+## The plan
+Duration: 6 lessons times 90 minutes
+Plan,
+* 2 lessons introduction, exercises from github.
+* 3-4 lessons group work, 2-3 persons per group.
+* 1-2 lessons presentation.
+
+
+
 # Covid19 Database Visualisation
 
 We are working with the covid-19 data from Jonh's Hopkins University.

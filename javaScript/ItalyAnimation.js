@@ -10,7 +10,6 @@ function setup() {
 	background(100);
 	text('antal rækker: ' + table.getRowCount(),600,400);
 	text('antal søjler: ' + table.getColumnCount(),600,420);
-
 	frameRate(3);
 }
 
