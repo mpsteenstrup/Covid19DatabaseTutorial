@@ -5,6 +5,12 @@ Plan,
 * 3-4 lessons group work, 2-3 persons per group.
 * 1-2 lessons presentation.
 
+## Wisit the class
+* 15/4, 12:10-13:40
+* 26/4, 13:55-15:25
+* 28/4 3, 12:10-13:40
+
+Central European Time (CET)
 
 
 # Covid19 Database Visualisation
@@ -40,9 +46,9 @@ You have to consider
 
 ## Three layer architecture (source [iftek](http://iftek.dk/leksikon:tre-lags-arkitektur))
 In a three layer architecture a program is divided in to three layers.
-**Data**, often consisting of a database.
-**Logic**, calculations based on the datalayer.
-**Presentation**, the layer that the users see.
+** Data **, often consisting of a database.
+** Logic **, calculations based on the datalayer.
+** Presentation **, the layer that the users see.
 
 The datalayer is public accesable data on Github.
 

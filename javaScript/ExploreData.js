@@ -14,7 +14,7 @@ function setup() {
   createCanvas(600,600);
 
   textSize(32);
-  text('datasæt',20,30);
+  text('datasæt',10,30);
   text('rows: ' + table.getRowCount(), 10, 60);
   text('columns ' + table.getColumnCount(), 10, 90);
   Italy = table.findRow('Italy','Country/Region');
