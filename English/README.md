@@ -12,6 +12,9 @@ Plan,
 
 Central European Time (CET)
 
+## Contact
+Mads Peter H. mpsteenstrup
+mps@rysensteen.dk
 
 # Covid19 Database Visualisation
 
