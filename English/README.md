@@ -47,7 +47,7 @@ You have to consider
 ## Three layer architecture (source [iftek](http://iftek.dk/leksikon:tre-lags-arkitektur))
 In a three layer architecture a program is divided in to three layers.
 ** Data **, often consisting of a database.
-** Logic **, calculations based on the datalayer.
+** Logic **, calculations based on the data layer.
 ** Presentation **, the layer that the users see.
 
 The datalayer is public accesable data on Github.
@@ -105,7 +105,7 @@ The different data sets eg `number of infected` and` number of dead` can be seen
 * Consider issues related to including multiple regions or countries.
 * Describe what information the first row of the table, header, indicates.
 
-Solution, **key**, row number in the table, **Entities**, countries or regions, **Attributes**, coordinates and number of infected.
+Solution, ** key **, row number in the table, **Entities**, countries or regions, ** Attributes **, coordinates and number of infected.
 
 # Programmering
 ## Atom
