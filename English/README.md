@@ -13,7 +13,7 @@ Plan,
 Central European Time (CET)
 
 ## Contact
-Mads Peter H. Steenstrup, 
+Mads Peter H. Steenstrup,
 mps@rysensteen.dk
 
 # Covid19 Database Visualisation
@@ -49,7 +49,7 @@ You have to consider
 
 ## Three layer architecture (source [iftek](http://iftek.dk/leksikon:tre-lags-arkitektur))
 In a three layer architecture a program is divided in to three layers.
-** Data **, often consisting of a database.
+*Data*, often consisting of a database.
 ** Logic **, calculations based on the data layer.
 ** Presentation **, the layer that the users see.
 
