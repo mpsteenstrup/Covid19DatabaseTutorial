@@ -13,7 +13,7 @@ Plan,
 Central European Time (CET)
 
 ## Contact
-Mads Peter H. mpsteenstrup
+Mads Peter H. Steenstrup, 
 mps@rysensteen.dk
 
 # Covid19 Database Visualisation
