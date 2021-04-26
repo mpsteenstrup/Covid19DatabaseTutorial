@@ -15,7 +15,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth,windowHeight);
   background(0,100,200);
-  textSize(60);
+  textSize(40);
   fill(200);
   frameRate(10);
   noStroke();
@@ -30,20 +30,30 @@ function draw(){
   max2 = 0;
   land = '';
   land2 = '';
+
+  maksimum = [0,0,0,0,0];
+  lande = ['','','','',''];
+
+  for (let j = 0; j<5; j++){
+
   for (let i = 0; i<table.getColumnCount(); i++){
-    if (parseInt(table.getColumn(count)[i])>max){
-      max = parseInt(table.getColumn(count)[i]);
-      land = table.getColumn(1)[i];
+    if (parseInt(table.getColumn(count)[i])>=maksimum[0]){
+      maksimum[0] = parseInt(table.getColumn(count)[i]);
+      lande[0] = table.getColumn(1)[i];
+      console.log(table.getColumn(count)[i]);
     }
-    if (parseInt(table.getColumn(count)[i])>max2 && parseInt(table.getColumn(count)[i])<max){
-        max2 = parseInt(table.getColumn(count)[i])
-        land2 = table.getColumn(1)[i];
+  if (parseInt(table.getColumn(count)[i])>maksimum[j] && parseInt(table.getColumn(count)[i])<maksimum[j-1]){
+      maksimum[j] = parseInt(table.getColumn(count)[i]);
+      lande[j] = table.getColumn(1)[i];
     }
+}
+
+}
+
+  for (let i = 0; i <5; i++){
+    text(lande[i], 100,100+i*160);
+    text(maksimum[i],100,160+i*160);
   }
-  text(land, 100,150);
-  text(max,100,250);
-  text(land2, 100,350);
-  text(max2,100,450);
 
 /*  confirmed = table.getColumn(count);*/
 
