@@ -29,9 +29,6 @@ I skal redegøre for datastrukturen og hvordan I behandler data.
 
 Visualiseringen skal fremlægges i grupper for mig.
 
-
-
-
 ## Tre-lags-arkitektur, (kilde [iftek](http://iftek.dk/leksikon:tre-lags-arkitektur))
 I en trelagsarkitur indeles et program i tre lag, hvilket er er nyttigt i implementeringen af programmer, da de tre lag så vidt mulig holdes adskilte og dermed er hele programmet lettere at overskue.
 
@@ -107,9 +104,6 @@ Vi får brug for data rent i csv format, Det kan gøres ved `Raw` knappen.
 
 
 # Værktøj til programmering
-## Atom
-Vi bruger Atom til at kode vores JS filer og kører den i browseren. Hvordan man laver ```index.html``` filen og opsætningen af teletype er beskrevet på siden, [https://github.com/mpsteenstrup/Billedmanipulation](https://github.com/mpsteenstrup/Billedmanipulation).
-
 ## P5js
 Vi bruger biblioteket P5js,
 
@@ -117,6 +111,22 @@ Vi bruger biblioteket P5js,
 * [Introduktion med en del små programmer](https://github.com/mpsteenstrup/GCP4)
 * [Kreativ Kodning, Kristian Wicnmann](https://www.youtube.com/channel/UCRSqTiVe7Rho95hNtd3hJBQ/videos), kode på [github.com/kwichmann/Kreativ-Kodning](https://github.com/kwichmann/Kreativ-Kodning).
 * [P5js Table reference](https://p5js.org/reference/#/p5.Table)
+
+## Atom
+Vi bruger Atom til at kode vores JS filer og kører den i browseren. Hvordan man laver ```index.html``` filen og opsætningen af teletype er beskrevet på siden, [https://github.com/mpsteenstrup/Billedmanipulation](https://github.com/mpsteenstrup/Billedmanipulation).
+
+## P5 editor
+Det er også muligt at bruge online editoren [https://editor.p5js.org/](https://editor.p5js.org/). Det er gratis at lave en konto og så kan man gemme programmerne online, men det er desværre ikke muligt at samskrive som i google docs.
+
+Hvis I vil arbejde med animationer i fuld skærm skal I
+* Gemme programmet ```filer```.
+* Vælg ```Share``` og fuldscreen.
+Nu kan I køre programmet i fuld skærm og når I gemmer programmet og updatere siden kan I se det I har lavet.
+
+Det er også muligt at dele programmet og embedde det i egne sider.
+
+
+
 
 ## HelloWorld med P5js
 Som altid er det godt at kunne køre et ```HelloWorld```script.
