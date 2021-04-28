@@ -13,7 +13,7 @@ function sumWorld(){
     for (i=0;i<table.getRowCount()-1;i++){
     total = total +  table.getNum(i,j);
     }
-    print(table.columns[33] + ' ' + total);
+    print(table.columns[j] + ' ' + total);
     total = 0;
   }
 }
