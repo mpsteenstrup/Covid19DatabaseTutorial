@@ -29,23 +29,26 @@ head = df.columns.to_numpy()
 #datoen = 475
 x = head[datoen:]
 y = data[country,datoen:].astype(int)
-ya = movingaverage(y,5)
-ya = np.diff(ya,n=1)*7/65e6*1e5
+#y = movingaverage(y,4)
 
 
 y = np.diff(y,n=1)*7/65e6*1e5
+for i in range(0,len(y)):
+    if y[i]<0:
+        y[i]=y[i-1]
 
 
-dage = np.array(range(0,len(ya)))
 
-popt, pcov = curve_fit(lin,dage,ya,[1.3,0.5])
+dage = np.array(range(0,len(y)))
+
+popt, pcov = curve_fit(lin,dage,y,[1.3,0.5])
 
 
-plt.plot_date(x[len(x)-len(ya):],ya)
-plt.plot(x[len(x)-len(ya):],lin(dage,*popt),'r-')
+plt.plot_date(x[len(x)-len(y):],y)
+plt.plot(x[len(x)-len(y):],lin(dage,*popt),'r-')
 
 print(x[0])
-print('datoen {} er der  et incidenstal på {:.2f}'.format(x[-1],ya[-1]))
+print('datoen {} er der  et incidenstal på {:.2f}'.format(x[-1],y[-1]))
 print('datoen {} er der det forventede incidenstal på {:.2f}'.format(x[-1],lin(len(x),*popt)))
 print('om en uge forventes den at være incidenstal på {:.2f}'.format(lin(len(x)+10,*popt)))
 
