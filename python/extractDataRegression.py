@@ -1,4 +1,5 @@
 # Covid 19 data fra golbal database, Johns Hopkins. Modellen er en logistisk og man angiver antal dage man vil have data, antal dage man vil forudsige udviklingen og evt. antallet af dage man ikke vil tage med, så man kan vurdere modellens forudsigelseskraft, evt. se Omikrons lyksagligheder.
+# Koden kan køres her, men ikke gemmen men kopieres ind.
 # https://trinket.io/library/trinkets/create?lang=python3
 
 
