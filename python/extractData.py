@@ -11,7 +11,7 @@ country = df.loc[df['Country/Region']=="Denmark"].index
 country = country[len(country)-1]
 
 data = df.to_numpy()
-nyeSmittede = np.diff(data[country,-60:])
+nyeSmittede = np.diff(data[country,-80:])
 dage = np.array(range(0,len(nyeSmittede)))
 
 
