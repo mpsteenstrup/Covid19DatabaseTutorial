@@ -1,15 +1,19 @@
+# Covid 19 data fra golbal database, Johns Hopkins. Modellen er en logistisk og man angiver antal dage man vil have data, antal dage man vil forudsige udviklingen og evt. antallet af dage man ikke vil tage med, så man kan vurdere modellens forudsigelseskraft, evt. se Omikrons lyksagligheder.
+# https://trinket.io/library/trinkets/create?lang=python3
+
+
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from scipy.optimize import curve_fit
 
-
 url = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv'
 
 df = pd.read_csv(url, on_bad_lines='skip')
-
 country = df.loc[df['Country/Region']=="Denmark"].index
 country = country[len(country)-1]
+
 n = int(input('angiv antal dage vi ser tilbage: '))
 m = int(input('angiv antal dage vi ser frem: '))
 d = int(input('angiv antal dage som regressionen skal se bort fra: '))
